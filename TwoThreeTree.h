@@ -14,6 +14,7 @@ public:
     ~TwoThreeTree();
 
     void insert(int k);
+    void traverseInOrder();
 private:
     TwoThreeNode* root;
     int node_count;
@@ -23,6 +24,7 @@ private:
     void insert(int k, TwoThreeNode* n);
     void search(TwoThreeNode *&found_node, int k);
     void split(int &k, TwoThreeNode *node2split, TwoThreeNode *&added_node);
+    void traverseInOrder(TwoThreeNode* n);
 };
 
 

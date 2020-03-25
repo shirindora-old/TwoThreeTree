@@ -2,6 +2,7 @@
 // Created by shirin dora on 20/03/2020.
 //
 
+#include <iostream>
 #include "TwoThreeTree.h"
 
 TwoThreeTree::TwoThreeTree() {
@@ -153,4 +154,20 @@ void TwoThreeTree::split(int &k, TwoThreeNode *node2split, TwoThreeNode *&added_
     node2split->reset_child(TwoThreeNode::MIDDLE);
     node2split->right_key = -1;
     added_node = new_node;
+}
+
+void TwoThreeTree::traverseInOrder() {
+    traverseInOrder(root);
+}
+
+void TwoThreeTree::traverseInOrder(TwoThreeNode *n) {
+    if (n) {
+        traverseInOrder(n->left);
+        std::cout << n->left_key << "\t";
+        traverseInOrder(n->middle);
+        if (n->right_key != -1) {
+            std::cout << n->right_key << "\t";
+        }
+        traverseInOrder(n->right);
+    }
 }

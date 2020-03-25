@@ -3,14 +3,16 @@
 
 int main() {
     TwoThreeTree tree;
-//    tree.insert(51);
-//    tree.insert(42);
-//    tree.insert(65);
-//    tree.insert(23);
-//    tree.insert(47);
-//    tree.insert(18);
-//    tree.insert(73);
+    tree.insert(51);
+    tree.insert(42);
+    tree.insert(65);
+    tree.insert(23);
+    tree.insert(47);
+    tree.insert(18);
+    tree.insert(73);
 //    tree.insert(81);
+
+    tree.traverseInOrder();
 
     tree.insert(73);
     tree.insert(54);
